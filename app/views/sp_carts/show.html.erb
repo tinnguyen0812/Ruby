@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @sp_cart %>
+
+<div>
+  <%= link_to "Edit this sp cart", edit_sp_cart_path(@sp_cart) %> |
+  <%= link_to "Back to sp carts", sp_carts_path %>
+
+  <%= button_to "Destroy this sp cart", @sp_cart, method: :delete %>
+</div>
