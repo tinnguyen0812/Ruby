@@ -50,6 +50,23 @@
             <p class="cart-empty-text">Your cart is empty.</p>
           </div>
           <div class="cart-items">
+            <% @cart.products.each do |product| %>
+                  <div class="shop-item">
+                      <div class="shop-item-image" style="background-color: rgb(225, 231, 237)">
+                        <%= image_tag(product.image ,style:'background-color: rgb(225, 231, 237)' )%>
+                      </div>
+                      <div class="shop-item-name"><%= product.name %>
+                      </div>
+                      <div class="shop-item-description">
+                        <tr>
+                          <td class='text-center'><%= product.des %></td>
+                        </tr >
+                      </div>
+                      <div class="shop-item-bottom">
+                        <div class="shop-item-price"><%= product.price %></div>
+                      </div>   
+                    </div>
+                  <%end%>
           </div>
         </div>
       </div>
